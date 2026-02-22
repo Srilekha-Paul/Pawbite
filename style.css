@@ -280,6 +280,113 @@ input:focus, textarea:focus {
     from {transform: translateY(-20px); opacity: 0;}
     to {transform: translateY(0); opacity: 1;}
 }
+/* ================= DARK MODE ================= */
+body.dark {
+    background: #1e1e1e;
+    color: white;
+}
+
+body.dark .contact-section {
+    background: #2a2a2a;
+}
+
+body.dark .contact-details,
+body.dark .contact-form {
+    background: #333;
+    color: white;
+}
+
+/* Toggle Button */
+.theme-toggle {
+    text-align: right;
+    padding: 15px 30px;
+}
+
+.theme-toggle button {
+    padding: 8px 15px;
+    border-radius: 20px;
+    border: none;
+    background: #ff7a00;
+    color: white;
+    cursor: pointer;
+}
+
+/* Floating Labels */
+.form-floating {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.form-floating input,
+.form-floating textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+    background: transparent;
+}
+
+.form-floating label {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    color: gray;
+    transition: 0.3s;
+    pointer-events: none;
+}
+
+.form-floating input:focus + label,
+.form-floating input:valid + label,
+.form-floating textarea:focus + label,
+.form-floating textarea:valid + label {
+    top: -10px;
+    left: 8px;
+    font-size: 12px;
+    background: white;
+    padding: 0 5px;
+    color: #ff7a00;
+}
+
+body.dark .form-floating input:focus + label,
+body.dark .form-floating textarea:focus + label {
+    background: #333;
+}
+
+/* Button */
+.btn {
+    width: 100%;
+    padding: 12px;
+    border-radius: 25px;
+    border: none;
+    background: #ff7a00;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+/* Toast */
+.toast {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #333;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 8px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 0.4s ease;
+}
+
+.toast.show {
+    opacity: 1;
+    transform: translateY(0);
+}
 /* FOOTER */
 footer{
   text-align:center;
