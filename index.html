@@ -75,48 +75,76 @@
 
 <!-- CONTACT -->
  <section id="contact" class="contact-section">
-    <h2>Contact Us</h2>
-    <p>Have questions? Get in touch with PawBite 🐶</p>
+
+    <h2 class="contact-title">Contact Us</h2>
+    <p class="contact-subtitle">
+        Have questions? Get in touch with PawBite 🐶
+    </p>
 
     <div class="contact-container">
 
-        <!-- Contact Details -->
+        <!-- Our Details -->
         <div class="contact-details">
             <h3>Our Details</h3>
-            <p><strong>Email:</strong> support@pawbite.com</p>
-            <p><strong>Phone:</strong> +91 98765 43210</p>
-            <p><strong>Address:</strong> Durgapur, West Bengal, India</p>
+
+            <div class="detail-item">
+                <span>📧</span>
+                <p><strong>Email:</strong> support@pawbite.com</p>
+            </div>
+
+            <div class="detail-item">
+                <span>📞</span>
+                <p><strong>Phone:</strong> +91 98765 43210</p>
+            </div>
+
+            <div class="detail-item">
+                <span>📍</span>
+                <p><strong>Address:</strong> Durgapur, West Bengal, India</p>
+            </div>
+
+            <div class="detail-item">
+                <span>⏰</span>
+                <p><strong>Working Hours:</strong> 9 AM - 8 PM</p>
+            </div>
         </div>
 
         <!-- Contact Form -->
-        <form id="contactForm" novalidate>
+        <form id="contactForm" class="contact-form">
+
             <div class="form-group">
-                <label for="name">Full Name</label>
-                <input type="text" id="name" placeholder="Enter your name">
+                <label>Full Name</label>
+                <input type="text" id="name" required placeholder="Enter your name">
                 <small class="error" id="nameError"></small>
             </div>
 
             <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" placeholder="Enter your email">
+                <label>Email</label>
+                <input type="email" id="email" required placeholder="Enter your email">
                 <small class="error" id="emailError"></small>
             </div>
 
             <div class="form-group">
-                <label for="message">Message</label>
-                <textarea id="message" rows="4" placeholder="Write your message"></textarea>
+                <label>Phone</label>
+                <input type="tel" id="phone" required placeholder="Enter your phone number">
+                <small class="error" id="phoneError"></small>
+            </div>
+
+            <div class="form-group">
+                <label>Message</label>
+                <textarea id="message" rows="4" required placeholder="Write your message"></textarea>
                 <small class="error" id="messageError"></small>
             </div>
 
             <button type="submit" class="btn">Send Message</button>
-            <p id="successMessage" class="success"></p>
-        </form>
+            <p class="success" id="successMessage"></p>
 
+        </form>
     </div>
+
 </section>
 
 <footer>
-  <p>© 2026 PawBite. All Rights Reserved.</p>
+  <p>© 2026 PawBite. Made By Srilekha Paul.</p>
 </footer>
 
 <!-- JS File -->

@@ -154,84 +154,115 @@ nav ul li a{
 }
 
 /* CONTACT */
-/* Contact Section */
 .contact-section {
-    padding: 60px 20px;
-    background-color: #f9f9f9;
+    padding: 70px 20px;
+    background: linear-gradient(to right, #fff7ef, #ffe8d4);
     text-align: center;
+    animation: fadeIn 1s ease-in-out;
 }
 
-.contact-section h2 {
-    font-size: 32px;
+.contact-title {
+    font-size: 36px;
     color: #ff7a00;
     margin-bottom: 10px;
+    animation: slideDown 0.8s ease;
+}
+
+.contact-subtitle {
+    color: #555;
+    margin-bottom: 40px;
 }
 
 .contact-container {
     display: flex;
     justify-content: center;
-    gap: 40px;
-    margin-top: 30px;
+    gap: 50px;
     flex-wrap: wrap;
 }
 
+/* Details Card */
 .contact-details {
-    background: #fff;
-    padding: 20px;
-    border-radius: 12px;
-    width: 280px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-    text-align: left;
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    width: 300px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    transition: 0.4s ease;
+}
+
+.contact-details:hover {
+    transform: translateY(-8px);
 }
 
 .contact-details h3 {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     color: #333;
 }
 
-form {
-    background: #fff;
-    padding: 25px;
-    border-radius: 12px;
-    width: 320px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+.detail-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    font-size: 15px;
+}
+
+.detail-item span {
+    font-size: 20px;
+}
+
+/* Form Card */
+.contact-form {
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    width: 340px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    transition: 0.4s;
+}
+
+.contact-form:hover {
+    transform: translateY(-8px);
 }
 
 .form-group {
-    margin-bottom: 15px;
     text-align: left;
+    margin-bottom: 18px;
 }
 
 input, textarea {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ccc;
     border-radius: 8px;
-    outline: none;
+    border: 1px solid #ccc;
+    transition: 0.3s;
 }
 
 input:focus, textarea:focus {
     border-color: #ff7a00;
+    box-shadow: 0 0 5px rgba(255,122,0,0.3);
 }
 
 .btn {
+    width: 100%;
+    padding: 12px;
+    border-radius: 30px;
+    border: none;
     background: #ff7a00;
     color: white;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 25px;
+    font-size: 15px;
     cursor: pointer;
-    width: 100%;
     transition: 0.3s;
 }
 
 .btn:hover {
-    background: #e66a00;
+    background: #e66700;
+    transform: scale(1.05);
 }
 
 .error {
     color: red;
-    font-size: 13px;
+    font-size: 12px;
 }
 
 .success {
@@ -239,6 +270,16 @@ input:focus, textarea:focus {
     margin-top: 10px;
 }
 
+/* Animations */
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes slideDown {
+    from {transform: translateY(-20px); opacity: 0;}
+    to {transform: translateY(0); opacity: 1;}
+}
 /* FOOTER */
 footer{
   text-align:center;
