@@ -13,6 +13,21 @@ offerBtn.addEventListener("click", () => {
   alert("🎉 Special Offer: Get 20% OFF on your first order!");
 });
 
+//smooth animation
+  const boxes = document.querySelectorAll(".box, .feature-card, .stat");
+
+  window.addEventListener("scroll", () => {
+    boxes.forEach(box => {
+      const position = box.getBoundingClientRect().top;
+      const screenHeight = window.innerHeight;
+
+      if (position < screenHeight - 100) {
+        box.style.opacity = "1";
+        box.style.transform = "translateY(0)";
+      }
+    });
+  });
+
 // Add to Cart Buttons
 const cartButtons = document.querySelectorAll(".cartBtn");
 
