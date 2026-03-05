@@ -8,44 +8,85 @@
 body{
   background:#fffaf5;
   color:#333;
+  line-height:1.6;
 }
 
-/* NAV */
+/* NAVIGATION */
 nav{
   display:flex;
   justify-content:space-between;
+  align-items:center;
   padding:20px 8%;
   background:#ff914d;
+}
+
+nav h1{
+  color:white;
+  font-size:24px;
 }
 
 nav ul{
   display:flex;
   list-style:none;
-  gap:20px;
+  gap:25px;
 }
 
 nav a{
   color:white;
   text-decoration:none;
+  font-weight:500;
+  transition:0.3s;
 }
 
-/* HERO */
+nav a:hover{
+  opacity:0.8;
+}
+
+/* HERO SECTION */
+
 .hero{
   display:flex;
   justify-content:space-between;
+  align-items:center;
   padding:80px 8%;
   flex-wrap:wrap;
+  gap:40px;
+}
+
+.hero-text{
+  flex:1;
+  min-width:280px;
 }
 
 .hero-text h2{
   font-size:42px;
   color:#ff914d;
+  margin-bottom:15px;
+}
+
+.hero-text p{
+  margin-bottom:20px;
+}
+
+.hero-img{
+  flex:1;
+  min-width:280px;
+}
+
+.hero-img img{
+  width:100%;
+  border-radius:20px;
 }
 
 /* PRODUCTS */
+
 .products{
-  padding:60px 8%;
+  padding:70px 8%;
   text-align:center;
+}
+
+.products h2{
+  margin-bottom:40px;
 }
 
 .product-grid{
@@ -58,19 +99,31 @@ nav a{
   background:white;
   padding:25px;
   border-radius:15px;
-  box-shadow:0 8px 20px rgba(0,0,0,0.05);
-  transition:.3s;
+  box-shadow:0 8px 20px rgba(0,0,0,0.08);
+  transition:0.3s;
+}
+
+.card img{
+  width:100%;
+  border-radius:10px;
+  margin-bottom:15px;
 }
 
 .card:hover{
   transform:translateY(-8px);
+  box-shadow:0 12px 25px rgba(0,0,0,0.15);
 }
 
 /* WHY SECTION */
+
 .why-section{
   padding:70px 8%;
   text-align:center;
   background:#fff4ea;
+}
+
+.why-section h2{
+  margin-bottom:40px;
 }
 
 .why-grid{
@@ -83,17 +136,24 @@ nav a{
   background:white;
   padding:25px;
   border-radius:15px;
-  transition:.3s;
+  box-shadow:0 5px 15px rgba(0,0,0,0.05);
+  transition:0.3s;
 }
 
 .why-card:hover{
   transform:translateY(-8px);
+  box-shadow:0 12px 25px rgba(0,0,0,0.15);
 }
 
 /* FAQ */
+
 .faq-section{
   padding:70px 8%;
   text-align:center;
+}
+
+.faq-section h2{
+  margin-bottom:30px;
 }
 
 .faq-item{
@@ -106,29 +166,40 @@ nav a{
 .faq-question{
   display:flex;
   justify-content:space-between;
-  padding:10px 0;
+  align-items:center;
+  padding:15px 0;
   font-weight:600;
 }
 
 .faq-answer{
   max-height:0;
   overflow:hidden;
-  transition:.3s;
+  transition:max-height 0.4s ease;
+  text-align:left;
+}
+
+.faq-answer p{
+  padding-bottom:15px;
 }
 
 .faq-item.active .faq-answer{
-  max-height:100px;
+  max-height:200px;
 }
 
 /* CONTACT */
+
 .contact-section{
   padding:70px 8%;
   text-align:center;
   background:#ffe8d4;
 }
 
+.contact-section h2{
+  margin-bottom:30px;
+}
+
 .contact-section form{
-  max-width:400px;
+  max-width:450px;
   margin:auto;
   display:flex;
   flex-direction:column;
@@ -137,12 +208,47 @@ nav a{
 
 .contact-section input,
 .contact-section textarea{
-  padding:10px;
+  padding:12px;
+  border-radius:8px;
+  border:1px solid #ccc;
+  font-size:14px;
 }
+
+.contact-section button{
+  padding:12px;
+  border:none;
+  background:#ff914d;
+  color:white;
+  border-radius:8px;
+  cursor:pointer;
+  font-size:16px;
+  transition:0.3s;
+}
+
+.contact-section button:hover{
+  background:#ff7a26;
+}
+
+/* FOOTER */
 
 footer{
   text-align:center;
   padding:20px;
   background:#ff914d;
   color:white;
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width:768px){
+
+  .hero{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  nav ul{
+    gap:15px;
+  }
+
 }
